@@ -39,7 +39,8 @@ function MovieCard({
                   ? { cursor: "pointer", color: "red" }
                   : { cursor: "pointer", color: "blue" }
               }
-              onClick={() => {
+              onClick={e => {
+                e.stopPropagation();
                 handleFavourite();
               }}
             >
