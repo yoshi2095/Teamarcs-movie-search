@@ -28,6 +28,7 @@ export default class MoviesList extends React.Component {
                 }}
                 {...movie}
                 showFavourites={showFavourites}
+                key={movie.imdbId}
               />
             );
           })

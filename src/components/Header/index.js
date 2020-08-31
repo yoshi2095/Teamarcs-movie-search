@@ -18,7 +18,7 @@ function Header({ handleHomeClick, handleShowFavourites, ...props }) {
         }}
         style={{ cursor: "pointer" }}
       >
-        Favorites
+        Favourites
       </div>
     </div>
   );

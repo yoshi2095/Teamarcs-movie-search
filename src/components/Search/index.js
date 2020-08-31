@@ -92,6 +92,7 @@ export default class Search extends React.Component {
                 return (
                   <div
                     className={"search-dropdown-item"}
+                    key={it.id}
                     onClick={e => {
                       let items = [...this.state.items];
                       items.forEach(it => (it.selected = false));

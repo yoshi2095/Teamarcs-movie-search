@@ -1,16 +1,23 @@
 import React from "react";
 import "./card.css";
-export default function MovieCard({
+import { withRouter } from "react-router-dom";
+function MovieCard({
   handleFavourite,
   Year,
   Title,
   Poster,
   favourite,
+  imdbID,
   showFavourites,
   ...props
 }) {
   return (
-    <div className="movie-card-container">
+    <div
+      className="movie-card-container"
+      onClick={() => {
+        props.history.push(`/movie/${imdbID}`);
+      }}
+    >
       <div className="movie-card">
         <div className="movie-card-img">
           <img
@@ -44,3 +51,5 @@ export default function MovieCard({
     </div>
   );
 }
+
+export default withRouter(MovieCard);
