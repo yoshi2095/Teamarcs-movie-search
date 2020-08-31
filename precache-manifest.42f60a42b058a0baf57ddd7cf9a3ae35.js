@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8428266ac42773e6af9950b886c93e93",
+    "revision": "c4c093a5c18ce7d932714c7eec686a3d",
     "url": "/Teamarcs-movie-search/index.html"
   },
   {
-    "revision": "18232edb3e5d762c737d",
+    "revision": "b7d9efce86f63125e33e",
     "url": "/Teamarcs-movie-search/static/css/main.9af42ad5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Teamarcs-movie-search/static/js/2.50bab07b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "18232edb3e5d762c737d",
-    "url": "/Teamarcs-movie-search/static/js/main.cb9cf33c.chunk.js"
+    "revision": "b7d9efce86f63125e33e",
+    "url": "/Teamarcs-movie-search/static/js/main.10c0867f.chunk.js"
   },
   {
     "revision": "fdaa07b9b18ea8b33774",
