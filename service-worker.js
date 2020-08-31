@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Teamarcs-movie-search/precache-manifest.689cf3faee73ffa1413eded7789e7ca2.js"
+  "/Teamarcs-movie-search/precache-manifest.2fea1129bdcda57d1f0d161709842487.js"
 );
 
 self.addEventListener('message', (event) => {
