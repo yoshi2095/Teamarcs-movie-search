@@ -16,13 +16,13 @@
 
 .movie-card-img {
   width: 100%;
-  height: 90%;
+  height: 400px;
   display: flex;
 }
 
 .movie-card-title {
   display: flex;
-  height: 10%;
+  margin-top: 10px;
   align-items: center;
   justify-content: center;
 }
@@ -40,4 +40,5 @@
   justify-content: space-between;
   margin-bottom: 10px;
   padding: 0 40px;
+  margin-top: 10px;
 }
