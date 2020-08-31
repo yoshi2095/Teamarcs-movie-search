@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/Teamarcs-movie-search/static/css/main.9af42ad5.chunk.css",
-    "main.js": "/Teamarcs-movie-search/static/js/main.7a6f30ef.chunk.js",
-    "main.js.map": "/Teamarcs-movie-search/static/js/main.7a6f30ef.chunk.js.map",
+    "main.js": "/Teamarcs-movie-search/static/js/main.d8c2578e.chunk.js",
+    "main.js.map": "/Teamarcs-movie-search/static/js/main.d8c2578e.chunk.js.map",
     "runtime-main.js": "/Teamarcs-movie-search/static/js/runtime-main.35396ebf.js",
     "runtime-main.js.map": "/Teamarcs-movie-search/static/js/runtime-main.35396ebf.js.map",
-    "static/js/2.81f11726.chunk.js": "/Teamarcs-movie-search/static/js/2.81f11726.chunk.js",
-    "static/js/2.81f11726.chunk.js.map": "/Teamarcs-movie-search/static/js/2.81f11726.chunk.js.map",
+    "static/js/2.50bab07b.chunk.js": "/Teamarcs-movie-search/static/js/2.50bab07b.chunk.js",
+    "static/js/2.50bab07b.chunk.js.map": "/Teamarcs-movie-search/static/js/2.50bab07b.chunk.js.map",
     "index.html": "/Teamarcs-movie-search/index.html",
-    "precache-manifest.2fea1129bdcda57d1f0d161709842487.js": "/Teamarcs-movie-search/precache-manifest.2fea1129bdcda57d1f0d161709842487.js",
+    "precache-manifest.689cf3faee73ffa1413eded7789e7ca2.js": "/Teamarcs-movie-search/precache-manifest.689cf3faee73ffa1413eded7789e7ca2.js",
     "service-worker.js": "/Teamarcs-movie-search/service-worker.js",
     "static/css/main.9af42ad5.chunk.css.map": "/Teamarcs-movie-search/static/css/main.9af42ad5.chunk.css.map",
-    "static/js/2.81f11726.chunk.js.LICENSE.txt": "/Teamarcs-movie-search/static/js/2.81f11726.chunk.js.LICENSE.txt",
+    "static/js/2.50bab07b.chunk.js.LICENSE.txt": "/Teamarcs-movie-search/static/js/2.50bab07b.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/Teamarcs-movie-search/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.35396ebf.js",
-    "static/js/2.81f11726.chunk.js",
+    "static/js/2.50bab07b.chunk.js",
     "static/css/main.9af42ad5.chunk.css",
-    "static/js/main.7a6f30ef.chunk.js"
+    "static/js/main.d8c2578e.chunk.js"
   ]
 }
