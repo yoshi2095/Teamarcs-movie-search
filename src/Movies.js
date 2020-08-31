@@ -35,7 +35,7 @@ export default class Movies extends React.Component {
       loading: true
     });
     fetch(
-      `http://www.omdbapi.com/?s=${searchTerm}&type=${selectedType.value}&apikey=1b9a1a44&plot=full`
+      `https://www.omdbapi.com/?s=${searchTerm}&type=${selectedType.value}&apikey=1b9a1a44&plot=full`
     )
       .then(response => response.json())
       .then(res => {

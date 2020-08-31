@@ -12,7 +12,7 @@ function SingleMovie({ ...props }) {
 
     let movieId = props.match.params.id;
     setLoading(true);
-    fetch(`http://www.omdbapi.com/?i=${movieId}&apikey=1b9a1a44&plot=full`)
+    fetch(`https://www.omdbapi.com/?i=${movieId}&apikey=1b9a1a44&plot=full`)
       .then(response => response.json())
       .then(res => {
         setMovie(res);
