@@ -27,7 +27,11 @@ export default function MovieCard({
           <div>{Year}</div>
           {!showFavourites ? (
             <div
-              style={{ cursor: "pointer" }}
+              style={
+                favourite
+                  ? { cursor: "pointer", color: "red" }
+                  : { cursor: "pointer", color: "blue" }
+              }
               onClick={() => {
                 handleFavourite();
               }}

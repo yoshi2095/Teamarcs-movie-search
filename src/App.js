@@ -42,6 +42,19 @@ export default class App extends React.Component {
         movies.forEach(mov => {
           mov.favourite = false;
         });
+
+        // check if any favourite movies in localStorage and mark them favourite.
+        if ("favourites" in localStorage) {
+          let favourites = JSON.parse(localStorage.getItem("favourites"));
+          favourites.forEach(fav => {
+            movies.forEach(mov => {
+              if (mov.imdbID === fav.imdbID) {
+                mov.favourite = fav.favourite;
+              }
+            });
+          });
+        }
+
         this.setState({
           movies,
           loading: false
@@ -86,6 +99,14 @@ export default class App extends React.Component {
       return mov.imdbID === favItem.imdbID;
     });
     movieClicked.favourite = !movieClicked.favourite;
+
+    //set favourites to localstorage:
+    let favouriteMovies = movies.filter(mov => {
+      return mov.favourite === true;
+    });
+
+    localStorage.setItem("favourites", JSON.stringify(favouriteMovies));
+
     this.setState({
       movies
     });
