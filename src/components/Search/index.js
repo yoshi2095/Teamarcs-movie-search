@@ -9,22 +9,26 @@ export default class Search extends React.Component {
         {
           type: "All",
           id: 1,
-          value: ""
+          value: "",
+          selected: true
         },
         {
           type: "Movies",
           id: 2,
-          value: "movie"
+          value: "movie",
+          selected: false
         },
         {
           type: "Series",
           id: 3,
-          value: "series"
+          value: "series",
+          selected: false
         },
         {
           type: "Episodes",
           id: 4,
-          value: "episode"
+          value: "episode",
+          selected: false
         }
       ],
       searchTerm: "Lord",
@@ -41,18 +45,35 @@ export default class Search extends React.Component {
     document.removeEventListener("mousedown", this.handleClickOutside);
   }
 
-  handleClickOutside = () => {
-    this.setState({
-      showMenu: false
-    });
+  handleClickOutside = event => {
+    if (
+      this.menuRef &&
+      this.menuRef.current &&
+      !this.menuRef.current.contains(event.target)
+    ) {
+      this.setState({
+        showMenu: false
+      });
+    }
   };
 
   render() {
-    let { searchTerm, items, showMenu } = this.state;
+    let { items, showMenu } = this.state;
+    let {
+      handleSearch,
+      searchTerm,
+      setSelectedType,
+      handleSearchClick
+    } = this.props;
     return (
       <div className="search-container">
         <div className="search-input-container">
-          <input type="text" value={searchTerm} className="search-input" />
+          <input
+            type="text"
+            value={searchTerm}
+            className="search-input"
+            onChange={handleSearch}
+          />
           <div
             className="search-dropdown"
             onClick={() => {
@@ -68,12 +89,41 @@ export default class Search extends React.Component {
           {showMenu ? (
             <div className="search-dropdown-menu" ref={this.menuRef}>
               {items.map(it => {
-                return <div className="search-dropdown-item">{it.type}</div>;
+                return (
+                  <div
+                    className={"search-dropdown-item"}
+                    onClick={e => {
+                      let items = [...this.state.items];
+                      items.forEach(it => (it.selected = false));
+                      let itemClicked = items.find(item => it.id === item.id);
+                      itemClicked.selected = !itemClicked.selected;
+                      setSelectedType(it);
+                      this.setState({
+                        showMenu: false,
+                        items
+                      });
+                    }}
+                    style={
+                      it.selected
+                        ? { background: "#009ae0", color: "white" }
+                        : {}
+                    }
+                  >
+                    {it.type}
+                  </div>
+                );
               })}
             </div>
           ) : null}
         </div>
-        <div className="search-button">Search</div>
+        <div
+          className="search-button"
+          onClick={() => {
+            handleSearchClick();
+          }}
+        >
+          Search
+        </div>
       </div>
     );
   }

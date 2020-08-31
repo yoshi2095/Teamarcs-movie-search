@@ -5,35 +5,34 @@ import "./list.css";
 export default class MoviesList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      movies: []
-    };
-  }
-
-  componentDidMount() {
-    fetch("http://www.omdbapi.com/?s=lord&apikey=1b9a1a44&plot=full")
-      .then(response => response.json())
-      .then(res => {
-        console.log("res:", res);
-        this.setState({
-          movies: [...res.Search]
-        });
-      })
-      .catch(err => {
-        console.log("err:", err);
-      });
   }
 
   render() {
-    let { movies } = this.state;
+    let { movies, loading, toggleFavourite, showFavourites } = this.props;
     return (
-      <div className="movies-list-container">
-        {movies.length ? (
+      <div
+        className={
+          loading || (!loading && !movies.length)
+            ? "movies-list-container"
+            : "movies-list-container-grid"
+        }
+      >
+        {loading ? (
+          <div className="movies-list-loading">Loading.....</div>
+        ) : movies.length ? (
           movies.map(movie => {
-            return <MovieCard {...movie} />;
+            return (
+              <MovieCard
+                handleFavourite={() => {
+                  toggleFavourite(movie);
+                }}
+                {...movie}
+                showFavourites={showFavourites}
+              />
+            );
           })
         ) : (
-          <div>No movies found</div>
+          <div className="movies-list-loading">No movies found</div>
         )}
       </div>
     );
