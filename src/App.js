@@ -5,16 +5,21 @@ import Header from "./components/Header";
 import Search from "./components/Search";
 import MoviesList from "./components/MoviesList";
 
-function App() {
-  return (
-    <div className="container">
-      <div className="content">
-        <Header />
-        <Search />
-        <MoviesList />
-      </div>
-    </div>
-  );
-}
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-export default App;
+  render() {
+    return (
+      <div className="container">
+        <div className="content">
+          <Header />
+          <Search />
+          <MoviesList />
+        </div>
+      </div>
+    );
+  }
+}

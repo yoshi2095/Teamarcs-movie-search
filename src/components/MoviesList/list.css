@@ -1,0 +1,7 @@
+.movies-list-container {
+  display: grid;
+  grid-template-rows: repeat(4, 100px);
+  grid-row-gap: 250px;
+  grid-column-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+}
